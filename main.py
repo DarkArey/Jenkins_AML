@@ -16,10 +16,10 @@ def dec2bin(x, bin_dig):
             bin_x = str(x % 2) + bin_x
             x //= 2
 
-    # if (len(bin_x) + 1) > bin_dig:
-    #     raise ValueError(
-    #         'The specified bin_dig is less than the required number '
-    #         'to represent the x')
+    if (len(bin_x) + 1) > bin_dig:
+        raise ValueError(
+            'The specified bin_dig is less than the required number '
+            'to represent the x')
 
     if sign:
         new_bin_x = ''
